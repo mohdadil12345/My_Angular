@@ -1,0 +1,51 @@
+<div class="product_container">
+    <!-- ====================================== -->
+    <div class="prod_items">
+      <img [src]="product.image" alt="" />
+    
+  
+      <p>Name : {{ product.name }}</p>
+      <p>price: {{ "$" + product.price }}</p>
+      <p>color: {{ product.color }}</p>
+      <!-- <p>Discounted price: {{ (product.price * product.DiscountedPrice / 100)-product.DiscountedPrice}}</p> -->
+      <p>Discounted price: {{ GetDiscoPrice().toFixed(2) }}</p>
+      <p>
+        {{
+          product.instock > 0
+            ? "only " + product.instock + " items-left"
+            : "Not in stock"
+        }}
+      </p>
+  
+  
+  <div class="btn">
+      <button (click)="deccc()">-</button>
+      <span>{{addTocart}}</span>
+      <button (click)="inccc()">+</button>
+  </div>
+  
+    </div>
+  
+    <!-- <input [value]="title" type="text"> -->
+    <!-- <input bind-value="title" type="text"> -->
+    <!-- <input [value]="title" type="text" [attr.aria-hidden]=""> -->
+  
+    <input (input)="OnNameChange($event)" placeholder="type input" />
+    <p>title : {{ title }}</p>
+    <button [disabled]="!(product.instock > 0)">Buy Now</button><br />
+    <!-- []  property binding -->
+  
+    <br>
+    <br>
+    <hr>
+  
+  
+    <!-- ========================================= -->
+  
+  
+
+   
+  
+  
+  </div>
+  

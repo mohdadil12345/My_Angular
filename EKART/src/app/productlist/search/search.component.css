@@ -1,0 +1,22 @@
+
+
+.ekart-search{
+   margin-top: 50px;
+}
+
+button{
+    cursor: pointer;
+}
+
+.ekart-search input{
+    padding: 5px;
+    border-radius: 4px;
+    width: 300px;
+}
+.ekart-search button{
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    
+}
