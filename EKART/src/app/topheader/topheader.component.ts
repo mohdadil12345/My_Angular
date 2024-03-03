@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './topheader.component.html',
   styleUrl: './topheader.component.css'
 })
-export class TopheaderComponent {
 
+export class TopheaderComponent {
+  MenuItems : string[] = ["Home", "Products", "Sale", "New Arrival", "Contact"]
 }

@@ -47,4 +47,9 @@ OnNameChange(event:any) {
    this.title = event.target.value
 }
 
+
+
+ listofdata : string[] = ["adil", "osama", "moneer", "saiful"]
+
+
 }

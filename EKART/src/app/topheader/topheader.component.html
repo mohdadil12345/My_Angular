@@ -4,10 +4,7 @@
         <h1>E-kart</h1>
       </div>
       <div class="menu">
-        <a href="">Home</a>
-        <a href="">Products</a>
-        <a href="">About</a>
-        <a href="">Contacts</a>
+            <a *ngFor=" let menu of MenuItems" href="#">{{menu}}</a>
       </div>
       <div class="search_bar">
         <input type="text" placeholder="searchbar" />
