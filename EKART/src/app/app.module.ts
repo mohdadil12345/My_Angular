@@ -4,16 +4,18 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopheaderComponent } from './topheader/topheader.component';
-import { ProductlistComponent } from './productlist/productlist.component';
-import { SearchComponent } from './productlist/search/search.component';
+import { ContainerComponent } from './container/container.component';
+import { SearchComponent } from './container/search/search.component';
 import { FormsModule } from '@angular/forms';
+import { ProductListComponent } from './container/product-list/product-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopheaderComponent,
-    ProductlistComponent,
-    SearchComponent
+    ContainerComponent,
+    SearchComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,

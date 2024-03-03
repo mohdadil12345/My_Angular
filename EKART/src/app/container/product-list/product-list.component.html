@@ -1,0 +1,27 @@
+
+<div class="saerbar">
+    <input [(ngModel)] = "search_result"  type="text" class="searchhbar">
+    <button>Search</button>
+</div>
+<p  *ngIf="search_result != '' " >search result for : {{search_result}} </p>
+
+<div class="container">
+
+
+  <div *ngFor="let ele of products" class="prod_items">
+  <div class="info">
+    <img [src]="ele.image" alt="" />
+    <h4 class="heading">{{ ele.title }}</h4>
+  </div>
+  <div *ngIf="ele.discount" class="label">
+    {{(ele.discount / ele.price*100).toFixed()}}%off
+  </div>
+    <div class="prirate">
+      <p>{{ ele.price }}</p>
+      <h5>{{ ele.rating.rate }}</h5>
+      
+    </div>
+    <div>{{ ele.category }}</div>   
+    <p [ngStyle]="{fontWeight:'bold', color : ele.in_inventory ? 'green' : 'red'}" >{{ele.in_inventory ? "Available in stock" : "Not available in stock" }}</p>
+  </div>
+</div>

@@ -1,7 +1,17 @@
 
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
 
 .product_container{
-    padding: 10px;
+   border: 1px solid red;
+   /* width: 100%; */
+   padding: 10px;
+   /* display: grid; 
+   grid-template-columns: repeat(auto, 400px); */
+ 
 }
 
 .prod_items{
@@ -25,5 +35,3 @@
     justify-content: center;
 }
 
-.btn button{
-}
