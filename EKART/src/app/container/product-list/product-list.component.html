@@ -1,7 +1,7 @@
 
 <div class="saerbar">
     <input [(ngModel)] = "search_result"  type="text" class="searchhbar">
-    <button>Search</button>
+    <button [ngClass]="{'btn':true, 'secr_btn':search_result, 'btn_disabled':!search_result}" [disabled] = "!search_result">Search</button>
 </div>
 <p  *ngIf="search_result != '' " >search result for : {{search_result}} </p>
 
