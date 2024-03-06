@@ -1,10 +1,10 @@
 
-<div class="saerbar">
+<!-- <div class="saerbar">
     <input [(ngModel)] = "search_result"  type="text" class="searchhbar">
     <button [ngClass]="{'btn':true, 'secr_btn':search_result, 'btn_disabled':!search_result}" [disabled] = "!search_result">Search</button>
 </div>
 <p  *ngIf="search_result != '' " >search result for : {{search_result}} </p> 
-
+ -->
 
 <!-- filter components -->
 <app-filter (filterradiobtnchanged) = "onfilterchnage($event)" [all]="totalprodCount"  [inStock]="totalproducinStock"  [outofStock]="prodssoutofstoc"  ></app-filter>

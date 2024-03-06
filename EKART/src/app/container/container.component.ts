@@ -51,5 +51,11 @@ OnNameChange(event:any) {
 
  listofdata : string[] = ["adil", "osama", "moneer", "saiful"]
 
+ parentsercval:string = ""
+
+ setsearchtext(value : string) {
+   this.parentsercval = value
+ }
+
 
 }

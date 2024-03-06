@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-search',
@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './search.component.css'
 })
 export class SearchComponent {
-  searchText : string = "womens watch"
+  
+  searchText : string = ""
 
 
   updtserchfun(event:any) {
@@ -14,4 +15,21 @@ export class SearchComponent {
     this.searchText = event.target.value
     
   }
+
+
+
+
+// create evnt binding
+@Output()
+searchtextchanged:EventEmitter<string> =  new EventEmitter<string>()
+   
+searchmethods(){
+  this.searchtextchanged.emit(this.searchText)
 }
+
+
+
+
+}
+
+
