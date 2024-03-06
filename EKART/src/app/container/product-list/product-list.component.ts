@@ -69,6 +69,7 @@ products = [
     "id": 5,
     "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
     "price": 695,
+    "in_inventory" : false,
     "discount" : 200,
     "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
     "category": "jewelery",
@@ -88,7 +89,7 @@ products = [
     "category": "jewelery",
     "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
     "rating": {
-      "rate": 3.9,
+      "rate": 4.0,
       "count": 70
     }
   },
@@ -102,7 +103,7 @@ products = [
     "category": "jewelery",
     "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
     "rating": {
-      "rate": 3,
+      "rate": 4.8,
       "count": 400
     }
   },
@@ -125,7 +126,7 @@ products = [
     "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
     "price": 6994,
     "discount" : 4500,
-    "in_inventory" : true,
+    "in_inventory" : false,
     "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
     "category": "electronics",
     "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
@@ -181,7 +182,7 @@ products = [
     "title": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
     "price": 599,
     "discount" : 199,
-    "in_inventory" : false,
+    "in_inventory" : true,
     "description": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz",
     "category": "electronics",
     "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
@@ -209,7 +210,7 @@ products = [
     "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
     "price": 569.99,
     "discount" : 200,
-    "in_inventory" : false,
+    "in_inventory" : true,
     "description": "Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates",
     "category": "women's clothing",
     "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
@@ -265,7 +266,7 @@ products = [
     "title": "Opna Women's Short Sleeve Moisture",
     "price": 788.95,
     "discount" : 300,
-    "in_inventory" : false,
+    "in_inventory" : true,
     "description": "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort",
     "category": "women's clothing",
     "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
@@ -289,6 +290,24 @@ products = [
     }
   }
 ]
+
+totalprodCount : number = this.products.length
+totalproducinStock  = this.products.filter(ele => ele.in_inventory == true).length
+prodssoutofstoc = this.products.filter(ele => ele.in_inventory == false).length
+
+
+
+
+
+onfilterchnage(value:string) {   // when we raise custom that emits string type
+  //  console.log("filllerchnage called")
+  console.log(value)
+   this.slectfilterbtninparent = value
+}
+
+
+slectfilterbtninparent : string = "all"
+
 
 
 search_result : string = ""

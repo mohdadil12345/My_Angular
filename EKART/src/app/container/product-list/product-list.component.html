@@ -3,7 +3,12 @@
     <input [(ngModel)] = "search_result"  type="text" class="searchhbar">
     <button [ngClass]="{'btn':true, 'secr_btn':search_result, 'btn_disabled':!search_result}" [disabled] = "!search_result">Search</button>
 </div>
-<p  *ngIf="search_result != '' " >search result for : {{search_result}} </p>
+<p  *ngIf="search_result != '' " >search result for : {{search_result}} </p> 
+
+
+<!-- filter components -->
+<app-filter (filterradiobtnchanged) = "onfilterchnage($event)" [all]="totalprodCount"  [inStock]="totalproducinStock"  [outofStock]="prodssoutofstoc"  ></app-filter>
+
 
 <div class="container">
 
@@ -26,6 +31,9 @@
   </div> -->
   
 
-  <app-productss *ngFor="let ele of products" [prod]="ele" ></app-productss>
+  <div class="prod_items" *ngFor="let ele of products" >
+
+    <app-productss  [prod]="ele" *ngIf="slectfilterbtninparent === 'all' || ele.in_inventory.toString() === slectfilterbtninparent"  ></app-productss>
+  </div>
 <!-- passa data from parent to child we can use custom property binding -->
 </div>
