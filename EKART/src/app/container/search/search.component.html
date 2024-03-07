@@ -1,10 +1,17 @@
 
 <div class="ekart-search">
   
-    <input [(ngModel)]="searchText" (input)="searchmethods()">
-    <button>Search</button>
-</div>
+     <!-- <input class="btn1" [(ngModel)]="searchText" (input)="searchmethods()">
+     <p>  <strong>Search Results for : </strong>{{searchText}}</p> -->
 
-<div class="searc-reslt">
-  <p>  <strong>Search Results for : </strong>{{searchText}}</p>
+
+    <!--  button k click p search work krna h to  -->
+    <input type="text" placeholder="search by title" >
+    <button class="btn" (click)="btnclick($event)">Search</button>
+    <p>searchText : {{searchText}}</p>
+
+
+
+
+
 </div>

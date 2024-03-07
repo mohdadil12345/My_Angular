@@ -13,10 +13,13 @@ button{
     border-radius: 4px;
     width: 300px;
 }
-.ekart-search button{
-    padding: 5px;
-    background-color: black;
-    color: white;
+
+
+.btn{
+    background-color: tomato;
+    color: black;
+    padding: 8px;
+    border: none;
     border-radius: 4px;
-    
+    margin-left: 4px;
 }

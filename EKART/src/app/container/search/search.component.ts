@@ -29,6 +29,13 @@ searchmethods(){
 
 
 
+btnclick(event : any) {
+  alert( event.target.value)
+  console.log(event.target.value, 'HH')
+  this.searchText = event.target.value
+}
+
+
 
 }
 
