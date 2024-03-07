@@ -29,11 +29,19 @@ searchmethods(){
 
 
 
-btnclick(event : any) {
-  alert( event.target.value)
-  console.log(event.target.value, 'HH')
-  this.searchText = event.target.value
+
+btnserchval :string = ""
+
+btnclick(inputell : HTMLInputElement) {
+    // console.log(inputEl)
+    // console.log(inputell.value)
+    this.btnserchval = inputell.value
+
+    //  child c parent m bhjna k liye when ever btnclick is raised we have to send the below event
+    this.searchtextchanged.emit(this.btnserchval)
 }
+
+
 
 
 

@@ -6,9 +6,9 @@
 
 
     <!--  button k click p search work krna h to  -->
-    <input type="text" placeholder="search by title" >
-    <button class="btn" (click)="btnclick($event)">Search</button>
-    <p>searchText : {{searchText}}</p>
+    <input #searchinptval placeholder="search by title" >
+    <button class="btn" (click)="btnclick(searchinptval)">Search</button>
+    <p>onbtnclick : {{btnserchval}}</p>
 
 
 
