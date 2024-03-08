@@ -60,11 +60,11 @@
     <!-- <p>value take from searc component: {{parentsercval}}</p>  -->
 
 
-    <product-list #prodlistomponnt></product-list>
+    <product-list   #prodlistomponnt></product-list>
 
 <!--  both are sibling component so we pass data from productlist compont to container using event binding and from container to dteails compont using property binding or we can also use template literal varible on product list component and we can use tem ref var -->
 
-<app-product-details *ngIf="prodlistomponnt.seleted_prod" ></app-product-details>
+<app-product-details *ngIf="prodlistomponnt.seleted_prod"  [proliscom]="prodlistomponnt" ></app-product-details>
 
   </div>
   

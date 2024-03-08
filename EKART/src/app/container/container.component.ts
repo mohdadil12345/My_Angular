@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { productsTypes } from '../models/productsTypes';
 
 @Component({
   selector: 'app-container',
@@ -56,6 +58,17 @@ OnNameChange(event:any) {
  setsearchtext(value : string) {
    this.parentsercval = value
  }
+
+
+
+
+//   details wala prdotc list to container to prodtdetails
+//  we asign product list componnt to this property
+@ViewChild(ProductDetailsComponent)prodlistomponnt : productsTypes;
+
+// product_details_Component store a referenc to productlist component
+
+//  now we passs product_details_Component to product details component go indetails create one propert proliscom
 
 
 }

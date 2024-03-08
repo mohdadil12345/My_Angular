@@ -36,9 +36,11 @@ searchmethods(){
 
 btnclick() {
 
+  alert(this.searchInputEl.nativeElement.value)
 
-    //  child c parent m bhjna k liye when ever btnclick is raised we have to send the below event
-    this.searchtextchanged.emit(this.searchText)
+  this.searchText = this.searchInputEl.nativeElement.value
+  this.searchtextchanged.emit(this.searchText )
+
 }
 
 

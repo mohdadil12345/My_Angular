@@ -12,7 +12,9 @@ export class productsTypes {
        image:string;
         title:string;
          discount:number;
-          category:string
+          category:string;
+          description:string;
+
 
           
         
