@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { productsTypes } from '../../models/productsTypes';
 
 @Component({
   selector: 'product-list',
@@ -315,6 +316,11 @@ search_result : string = ""
 updatesearch(event : any) {
    this.search_result = event.target.value
 }
+
+
+
+//  details 
+seleted_prod : productsTypes ;
 
 
 }

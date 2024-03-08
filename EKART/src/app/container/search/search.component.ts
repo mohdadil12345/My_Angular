@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-search',
@@ -30,15 +30,15 @@ searchmethods(){
 
 
 
-btnserchval :string = ""
+// btnserchval :string = ""
 
-btnclick(inputell : HTMLInputElement) {
-    // console.log(inputEl)
-    // console.log(inputell.value)
-    this.btnserchval = inputell.value
+     @ViewChild("searchInput") searchInputEl  : ElementRef
+
+btnclick() {
+
 
     //  child c parent m bhjna k liye when ever btnclick is raised we have to send the below event
-    this.searchtextchanged.emit(this.btnserchval)
+    this.searchtextchanged.emit(this.searchText)
 }
 
 
