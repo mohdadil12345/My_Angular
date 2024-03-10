@@ -1,7 +1,10 @@
 
 
 .ekart-search{
-   /* margin-top: 50px; */
+   margin-top: 15px;
+   width: 400px;
+   /* box-shadow: rgba(131, 126, 126, 0.9) 1px 1px 4px 1px; */
+
 }
 
 button{
@@ -16,10 +19,10 @@ button{
 
 
 .btn{
-    background-color: tomato;
-    color: black;
+    color: rgb(255, 255, 255);
+    background-color: black;
     padding: 8px;
     border: none;
     border-radius: 4px;
-    margin-left: 4px;
+    margin-left: 10px;
 }

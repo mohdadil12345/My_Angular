@@ -9,12 +9,14 @@
 }
 
 .navbar{
-    background-color: rgba(13, 113, 133);
-    color: white;
+    /* background-color: rgba(13, 113, 133); */
+    background-color:white;
+    color: black;
     display: flex;
      align-items: center;
      justify-content: space-evenly;
      padding: 10px;
+     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .menu{
@@ -25,8 +27,9 @@
 }
 
 .menu a{
-    color: white;
+    color: black;
     text-decoration: none;
+    font-weight: bold;
 }
 
 
@@ -48,3 +51,8 @@
     border-radius: 4px;
 }
 
+.sign_btn{
+    background-color: black;
+    color:white ;
+    margin-left: 100px;
+}

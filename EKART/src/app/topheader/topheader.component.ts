@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
 })
 
 export class TopheaderComponent {
-  MenuItems : string[] = ["Home", "Products", "Sale", "New Arrival", "Contact"]
 }

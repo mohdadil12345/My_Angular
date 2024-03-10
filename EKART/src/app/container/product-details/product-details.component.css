@@ -18,3 +18,11 @@
     width: 400px;
 }
 
+.cart_btn{
+  padding: 8px;
+  border-radius: 4px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
